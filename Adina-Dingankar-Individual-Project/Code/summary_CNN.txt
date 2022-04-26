@@ -1,0 +1,55 @@
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 44, 13, 128)       1280      
+                                                                 
+ batch_normalization (BatchN  (None, 44, 13, 128)      512       
+ ormalization)                                                   
+                                                                 
+ activation (Activation)     (None, 44, 13, 128)       0         
+                                                                 
+ max_pooling2d (MaxPooling2D  (None, 22, 7, 128)       0         
+ )                                                               
+                                                                 
+ conv2d_1 (Conv2D)           (None, 22, 7, 72)         83016     
+                                                                 
+ batch_normalization_1 (Batc  (None, 22, 7, 72)        288       
+ hNormalization)                                                 
+                                                                 
+ activation_1 (Activation)   (None, 22, 7, 72)         0         
+                                                                 
+ max_pooling2d_1 (MaxPooling  (None, 6, 2, 72)         0         
+ 2D)                                                             
+                                                                 
+ conv2d_2 (Conv2D)           (None, 6, 2, 64)          41536     
+                                                                 
+ batch_normalization_2 (Batc  (None, 6, 2, 64)         256       
+ hNormalization)                                                 
+                                                                 
+ activation_2 (Activation)   (None, 6, 2, 64)          0         
+                                                                 
+ max_pooling2d_2 (MaxPooling  (None, 2, 1, 64)         0         
+ 2D)                                                             
+                                                                 
+ conv2d_3 (Conv2D)           (None, 2, 1, 64)          36928     
+                                                                 
+ batch_normalization_3 (Batc  (None, 2, 1, 64)         256       
+ hNormalization)                                                 
+                                                                 
+ activation_3 (Activation)   (None, 2, 1, 64)          0         
+                                                                 
+ max_pooling2d_3 (MaxPooling  (None, 1, 1, 64)         0         
+ 2D)                                                             
+                                                                 
+ reshape (Reshape)           (None, 1, 64)             0         
+                                                                 
+ lstm (LSTM)                 (None, 32)                12416     
+                                                                 
+ dense (Dense)               (None, 14)                462       
+                                                                 
+=================================================================
+Total params: 176,950
+Trainable params: 176,294
+Non-trainable params: 656
+_________________________________________________________________
